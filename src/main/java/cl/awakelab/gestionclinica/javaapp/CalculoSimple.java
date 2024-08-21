@@ -12,10 +12,10 @@ public class CalculoSimple implements ICalculoDescuento{
             if(detalle.getEdad() <= 5){
                 desct = 0.05d;
                 descuentos.add(desct);
-            } else if (detalle.getEdad() > 5 && detalle.getEdad() < 13) {
+            } else if ( detalle.getEdad() < 13) {
                 desct = 0.03d;
                 descuentos.add(desct);
-            }else if (detalle.getEdad() >= 13 && detalle.getEdad() <= 35) {
+            }else if (detalle.getEdad() <= 35) {
                 if(detalle.getSexo().equals("Hombre")){
                     desct = 0d;
                     descuentos.add(desct);
@@ -23,7 +23,7 @@ public class CalculoSimple implements ICalculoDescuento{
                     desct = 1.02d;
                     descuentos.add(desct);
                 }
-            } else if (detalle.getEdad() > 35 && detalle.getEdad() < 60) {
+            } else if (detalle.getEdad() < 60) {
                 desct = 0.1d;
                 descuentos.add(desct);
             }else{
@@ -35,7 +35,6 @@ public class CalculoSimple implements ICalculoDescuento{
                     descuentos.add(desct);
                 }
             }
-
         }
         return descuentos;
     }

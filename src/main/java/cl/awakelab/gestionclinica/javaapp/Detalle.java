@@ -11,3 +11,4 @@ public class Detalle {
     private String especialidad;
     private String sexo;
 }
+
